@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 @Service
-@RocketMQMessageListener(topic="",consumerGroup="")
+@RocketMQMessageListener(topic="${rocketmq.topic}",consumerGroup="${rocketmq.consumer.group}")
 public class RocketMqListener implements RocketMQListener<MessageExt>{
 	
 	private final Logger LOG = LoggerFactory.getLogger(RocketMqListener.class);

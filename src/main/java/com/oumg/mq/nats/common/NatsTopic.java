@@ -1,7 +1,7 @@
 package com.oumg.mq.nats.common;
 
 public enum NatsTopic {
-	
+	OMG_NATS("1001","omg_nats"),
 	;
 	
 	public String index;
