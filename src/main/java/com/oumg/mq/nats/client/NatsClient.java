@@ -58,7 +58,7 @@ public class NatsClient {
 		Options options = new Options.Builder()
 			.maxReconnects(-1)
 			.maxPingsOut(this.pingsOut)
-			.connectionTimeout(Duration.ofSeconds(this.connectTimeOut))
+			.connectionTimeout(Duration.ofMillis(this.connectTimeOut))
 			.userInfo(this.username, this.password)
 			.pingInterval(Duration.ofMillis(this.pingInterval))
 			.connectionListener(new NatsListener())
